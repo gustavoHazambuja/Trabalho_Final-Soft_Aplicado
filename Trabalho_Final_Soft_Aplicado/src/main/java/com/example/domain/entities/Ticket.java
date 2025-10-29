@@ -31,4 +31,11 @@ public class Ticket {
     @Enumerated(EnumType.STRING)
     private TicketStatus status;
 
+    public Ticket(String codigo, LocalDateTime entrada, String placa, TicketStatus status){
+        this.codigo = codigo;
+        this.entrada = entrada;
+        this.placa = placa;
+        this.status = status;
+    }
+
 }
