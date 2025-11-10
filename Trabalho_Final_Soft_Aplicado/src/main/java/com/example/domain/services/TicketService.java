@@ -18,13 +18,16 @@ public class TicketService {
     @Autowired
     private TicketTarifa tarifa;
 
+    @Autowired
+    private TicketValidacao validacao;
+
 
     public Ticket emitirTicket(String placa){
         return null;
     }
 
     public boolean validarTicket(String codigo){
-        return true;
+        return validacao.validarTicket(codigo);
     }
 
     public BigDecimal calcularTarifa(String codigo){
