@@ -15,6 +15,9 @@ public class TicketService {
     @Autowired
     private TicketRepository repository;
 
+    @Autowired
+    private TicketTarifa tarifa;
+
 
     public Ticket emitirTicket(String placa){
         return null;
@@ -25,7 +28,7 @@ public class TicketService {
     }
 
     public BigDecimal calcularTarifa(String codigo){
-        return null;
+        return tarifa.calcularTarifa(codigo);
     }
 
 
