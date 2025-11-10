@@ -22,8 +22,12 @@ public class TicketService {
     private TicketValidacao validacao;
 
 
-    public Ticket emitirTicket(String placa){
-        return null;
+    public TicketDTO emitirTicket(TicketDTO dto){
+        
+        Ticket salvarTicket = fromModel(dto);
+        repository.save(salvarTicket);
+
+        return TicketDTO.toModel(salvarTicket);
     }
 
     public boolean validarTicket(String codigo){

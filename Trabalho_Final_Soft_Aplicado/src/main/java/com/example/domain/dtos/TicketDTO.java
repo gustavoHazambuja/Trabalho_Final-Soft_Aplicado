@@ -35,7 +35,7 @@ public class TicketDTO {
 
 
 
-    public TicketDTO toModel(Ticket ticket){
+    public static TicketDTO toModel(Ticket ticket){
         return new TicketDTO(
             ticket.getCodigo(),
             ticket.getEntrada(),
