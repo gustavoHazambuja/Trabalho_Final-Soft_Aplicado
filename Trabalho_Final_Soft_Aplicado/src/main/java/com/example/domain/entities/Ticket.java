@@ -20,15 +20,13 @@ import lombok.Setter;
 @Table(name = "tb_ticket")
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
 public class Ticket {
- 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
     private String codigo;
+
     private LocalDateTime entrada;
     private String placa;
 

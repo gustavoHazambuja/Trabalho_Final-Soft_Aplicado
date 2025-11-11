@@ -1,0 +1,10 @@
+INSERT INTO tb_ticket (codigo, entrada, placa, status) VALUES (RANDOM_UUID(), '2025-11-10 07:35:00', 'IXS-2049', 'ABERTO');
+INSERT INTO tb_ticket (codigo, entrada, placa, status) VALUES (RANDOM_UUID(), '2025-11-10 08:10:00', 'JKL-5587', 'ABERTO');
+INSERT INTO tb_ticket (codigo, entrada, placa, status) VALUES (RANDOM_UUID(), '2025-11-10 08:45:00', 'QWE-9876', 'PAGO');
+INSERT INTO tb_ticket (codigo, entrada, placa, status) VALUES (RANDOM_UUID(), '2025-11-10 09:15:00', 'ASD-3344', 'ABERTO');
+INSERT INTO tb_ticket (codigo, entrada, placa, status) VALUES (RANDOM_UUID(), '2025-11-10 09:50:00', 'ZXC-2211', 'PAGO');
+INSERT INTO tb_ticket (codigo, entrada, placa, status) VALUES (RANDOM_UUID(), '2025-11-10 10:25:00', 'RTY-8899', 'ABERTO');
+INSERT INTO tb_ticket (codigo, entrada, placa, status) VALUES (RANDOM_UUID(), '2025-11-10 10:55:00', 'FGH-6677', 'ABERTO');
+INSERT INTO tb_ticket (codigo, entrada, placa, status) VALUES (RANDOM_UUID(), '2025-11-10 11:20:00', 'VBN-5532', 'PAGO');
+INSERT INTO tb_ticket (codigo, entrada, placa, status) VALUES (RANDOM_UUID(), '2025-11-10 11:45:00', 'TYU-1188', 'ABERTO');
+INSERT INTO tb_ticket (codigo, entrada, placa, status) VALUES (RANDOM_UUID(), '2025-11-10 12:15:00', 'PLM-4400', 'PAGO');
