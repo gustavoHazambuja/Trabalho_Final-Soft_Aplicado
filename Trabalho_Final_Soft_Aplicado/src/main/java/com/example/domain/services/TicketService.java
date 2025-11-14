@@ -21,6 +21,9 @@ public class TicketService {
     @Autowired
     private TicketValidacao validacao;
 
+    @Autowired
+    private TicketPagos pagos;
+
 
     public TicketDTO emitirTicket(TicketDTO dto){
         
@@ -36,6 +39,10 @@ public class TicketService {
 
     public BigDecimal calcularTarifa(String codigo){
         return tarifa.calcularTarifa(codigo);
+    }
+
+    public int numTicketsPagos(int dia, int mes){
+        return pagos.numTicketsPagos(dia, mes);
     }
 
 
