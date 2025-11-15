@@ -24,6 +24,9 @@ public class TicketService {
     @Autowired
     private TicketPagos pagos;
 
+    @Autowired
+    private TicketTotalPagamentos pagamentos;
+
 
     public TicketDTO emitirTicket(TicketDTO dto){
         
@@ -43,6 +46,10 @@ public class TicketService {
 
     public int numTicketsPagos(int dia, int mes){
         return pagos.numTicketsPagos(dia, mes);
+    }
+
+    public BigDecimal valorTotalRecebido(int dia, int mes){
+        return pagamentos.valorTotalRecebido(dia, mes);
     }
 
 
