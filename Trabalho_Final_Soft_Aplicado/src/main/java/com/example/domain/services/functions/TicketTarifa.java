@@ -1,4 +1,4 @@
-package com.example.domain.services;
+package com.example.domain.services.functions;
 
 import java.math.BigDecimal;
 import java.time.Duration;

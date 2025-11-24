@@ -7,6 +7,11 @@ import org.springframework.stereotype.Service;
 
 import com.example.domain.dtos.TicketDTO;
 import com.example.domain.entities.Ticket;
+import com.example.domain.services.functions.TicketPagamento;
+import com.example.domain.services.functions.TicketPagos;
+import com.example.domain.services.functions.TicketTarifa;
+import com.example.domain.services.functions.TicketTotalPagamentos;
+import com.example.domain.services.functions.TicketValidacao;
 import com.example.infrastructure.repositories.TicketRepository;
 
 @Service
@@ -27,6 +32,9 @@ public class TicketService {
     @Autowired
     private TicketTotalPagamentos pagamentos;
 
+    @Autowired
+    private TicketPagamento pagamentoTicket;
+
 
     public TicketDTO emitirTicket(TicketDTO dto){
         
@@ -38,6 +46,10 @@ public class TicketService {
 
     public boolean validarTicket(String codigo){
         return validacao.validarTicket(codigo);
+    }
+
+    public String realizarPagamento(String codigo){
+        return pagamentoTicket.realizarPagamento(codigo);
     }
 
     public BigDecimal calcularTarifa(String codigo){

@@ -1,4 +1,4 @@
-package com.example.domain.services;
+package com.example.domain.services.functions;
 
 import java.time.Duration;
 import java.time.LocalDateTime;

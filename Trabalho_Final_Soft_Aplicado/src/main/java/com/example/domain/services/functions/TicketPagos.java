@@ -1,6 +1,6 @@
-package com.example.domain.services;
+package com.example.domain.services.functions;
 
-import java.math.BigDecimal;
+
 import java.time.LocalDate;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,28 +10,19 @@ import com.example.domain.enums.TicketStatus;
 import com.example.infrastructure.repositories.TicketRepository;
 
 @Service
-public class TicketTotalPagamentos {
-    
+public class TicketPagos {
+
     @Autowired
     private TicketRepository repository;
+    
+    public int numTicketsPagos(int dia, int mes){
 
-    @Autowired
-    private TicketTarifa tarifa;
-
-
-    public BigDecimal valorTotalRecebido(int dia, int mes){
-
-        return (BigDecimal) repository.findAll().stream()
+        return (int) repository.findAll().stream()
             .filter(t -> t.getStatus() == TicketStatus.PAGO)
             .filter(t -> {
                 LocalDate data = t.getEntrada().toLocalDate();
                 return data.getDayOfMonth() == dia && data.getMonthValue() == mes;
             })
-            .map(t -> {
-                return tarifa.calcularTarifa(t.getCodigo());
-            })
-            .filter(v -> v != null)
-            .reduce(BigDecimal.ZERO, BigDecimal::add);
-            
+            .count();
     }
 }
